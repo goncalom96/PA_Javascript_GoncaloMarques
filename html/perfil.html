@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRIMAVERA Business Software Solutions</title>
+    <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+    <link href="/css/reset.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="/css/index.css" rel="stylesheet" type="text/css" />
+    <link href="/css/registo_utilizador.css" rel="stylesheet" type="text/css" />
+    <link href="/css/perfil.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+    <header>
+        <div class="headerImagens">
+            <a class="primaveraImg" href="https://pt.primaverabss.com/pt/"><img src="/img/logotipo.png"></a>
+
+            <span id="bemVindo"></span>
+            <label for="caixaPesquisa"></label> <input type="text" id="caixaPesquisa">
+            <a id="iconLupa"> <i class="fa-solid fa-magnifying-glass" title="Pesquisa"></i></a>
+
+            <a id="iconRegisto" href="/html/registo_utilizador.html"><i class="fa-solid fa-user-plus"
+                    title="Registo"></i></a>
+            <a id="iconLogin"><i class="fa-solid fa-arrow-right-to-bracket" title="Login"></i></i></a>
+
+            <a id="iconPerfil"> <i class="fa-regular fa-user" title="Perfil"></i> </a>
+            <a id="iconLogout"> <i class="fa-solid fa-arrow-right-from-bracket" title="Logout"></i> </a>
+
+            <a id="iconHamburguer"><i class="fa-solid fa-bars" title="Menu"></i></a>
+        </div>
+
+        <section class="modal">
+            <section class="dialogBox">
+                <h2>Controlo de acessos</h2>
+                <p class="mensagemErroModal"></p>
+                <p><label for="emailModal">E-mail:</label> <input type="text" id="emailModal"></p>
+                <p><label for="senhaModal">Senha:</label> <input type="password" id="senhaModal"></p>
+                <p><input type="button" id="btValidar" value="Validar"></p>
+                <span class="btFecha">X</span>
+            </section>
+        </section>
+
+        <nav class="headerNav">
+            <ul class="headerNavOptions">
+                <li><a>CONTABILISTAS</a></li>
+                <li><a>SETOR PRIVADO</a></li>
+                <li><a>SETOR PÚBLICO</a></li>
+                <li><a>FORMAÇÃO</a></li>
+                <li><a>PARCEIROS</a></li>
+                <li><a>CARREIRAS</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Perfil</h2>
+
+        <div id="perfil">
+
+            <p><span id="nomeUtilizador"></span></p>
+            <p><span id="emailUtilizador"></span></p>
+            <p><span id="senhaUtilizador"></span></p>
+            <p><span id="moradaUtilizador"></span></p>
+            <p><span id="codigoPostalUtilizador"></span></p>
+            <p><span id="paisUtilizador"></span></p>
+
+            <div id="alterar">
+                <p><input type="submit" value="Alterar informação" id="btAlterar"></p>
+            </div>
+        </div>
+
+        <form id="atualizarPerfil">
+
+            <p id="novoNomeUtilizador"></span></p>
+            <p class="mensagemErroRegistoNome"></p>
+
+            <p id="novoEmailUtilizador"></p>
+            <p class="mensagemErroRegistoEmail"></p>
+
+            <p id="novaSenhaUtilizador"></p>
+            <p class="mensagemErroRegistoSenha"></p>
+
+            <p id="novaConfirmacaoSenhaUtilizador"></p>
+            <p class="mensagemErroRegistoConfirmacaoSenha"></p>
+            
+            <p id="novaMoradaUtilizador"></p>
+
+            <p id="novoCodigoPostalUtilizador"></p>
+
+            <p id="novoPaisUtilizador"></p>
+
+            <div id="guardar">
+                <p><input type="submit" value="Guardar Informações" id="btGuardar"></p>
+            </div>
+        </form>
+    </main>
+
+    <footer>
+        <ul>
+            <h4>PRIMAVERA</h4>
+            <li><a>Sobre a PRIMAVERA</a></li>
+            <li><a>Responsabilidade Social</a></li>
+            <li><a>Recrutamento</a></li>
+            <li><a>Os nossos Clientes</a></li>
+            <li><a>Referral Members</a></li>
+            <li><a>Consultoria</a></li>
+            <li><a>Suporte</a></li>
+            <li><a>Blog</a></li>
+            <li><a>Developers Network</a></li>
+            <li><a>HelpCenter</a></li>
+            <li><a>MarketPlace</a></li>
+        </ul>
+
+        <ul>
+            <h4>EDUCATION</h4>
+            <li><a>Teaching with PRIMAVERA</a></li>
+            <li><a>Education Talks</a></li>
+            <li><a>Education Labs</a></li>
+            <li><a>Study Visits</a></li>
+            <li><a>Formação de Docentes</a></li>
+        </ul>
+
+        <ul>
+            <h4>NOTICIAS E EVENTOS</h4>
+            <li><a>Press Releases</a></li>
+            <li><a>Eventos e Webinars</a></li>
+            <li><a>Blog</a></li>
+            <li><a>Newsletter</a></li>
+        </ul>
+
+        <ul>
+            <h4>CONTACTOS</h4>
+            <li><a>Como chegar</a></li>
+            <li><a>Contactar agora</a></li>
+        </ul>
+
+        <ul>
+            <h4>SITE</h4>
+            <li><a>Política de Privacidade</a></li>
+            <li><a>Termos de Utilização</a></li>
+            <li><a>Mapa do Site</a></li>
+        </ul>
+    </footer>
+
+    <script src="/js/index.js"></script>
+    <script src="/js/perfil.js"></script>
+
+</body>
+
+</html>

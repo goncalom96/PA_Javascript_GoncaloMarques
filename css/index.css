@@ -1,0 +1,671 @@
+/* ----------------------------------------------------//------------------------------------------------------- */
+/* --------- BODY -------------------------------------//---------------------------------------- BODY --------- */
+/* ----------------------------------------------------//------------------------------------------------------- */
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('/public/Roboto/Roboto-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    max-width: 1400px;
+    margin: 0 auto;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+h2 {
+    font-size: 35px;
+    color: #3C368C;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* --------- Projeto II -------------------------------//---------------------------------- Projeto II -------- */
+
+
+
+
+
+
+/* ----------------------------------------------------//------------------------------------------------------- */
+/* ------- HEADER -------------------------------------//---------------------------------------- HEADER ------- */
+/* ----------------------------------------------------//------------------------------------------------------- */
+
+header {
+    height: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content:center;
+    list-style-type: none;
+    background-color: #f5f5f5;
+}
+
+.headerImagens {
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+    justify-content:flex-end;
+    padding-right: 10px;
+    gap: 15px;
+}
+
+.headerImagens > a {
+    cursor: pointer;
+    color:inherit;
+}
+
+.primaveraImg {
+    margin-right: auto;
+    padding-left: 20px;
+}
+
+
+.headerNavOptions a {
+    text-decoration: none;
+    color: #a4a3a3;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.headerNavOptions a:hover {
+    text-decoration: none;
+    color: #0075be;
+}
+
+
+.headerNav {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+}
+
+.headerNavOptions {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+}
+
+#iconHamburguer {
+   display: none;
+}
+
+@media screen and (max-width: 800px) {
+    
+    .headerNav {
+        display: none;
+    }
+
+    #iconHamburguer {
+        display: block;
+    }
+
+} 
+
+/* --------- Projeto II -------------------------------//---------------------------------- Projeto II -------- */
+
+#caixaPesquisa {
+    display: none;
+    border: 1px solid #aaa;
+    background-color: rgba(245,245,245, 0.65);
+    width: 0px;
+    height: 30px;
+    transition: width 0.5s;
+}
+
+
+.modal {
+	position: fixed;
+    /* overflow: hidden; */
+    top: 0;
+    left: 0;
+	width: 100vw;
+	height: 100vh;
+    background-color: rgba(0,0,0,0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    z-index:9999;
+}
+
+.dialogBox {
+    padding: 20px;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items:flex-start;
+    height: 130px;
+    width: 240px;
+    background-color: white;
+    border: 3px solid grey;
+}
+
+.dialogBox > * {
+    margin-bottom: 15px;
+}
+
+.dialogBox > h2 {
+    font-weight: bold;
+    color: #000;
+    font-size: 20px;
+}
+
+
+#emailModal, #senhaModal {
+    width: 180px ;
+}
+
+#btValidar {
+    position: absolute;
+    right: 27px;
+    background-color:#0d6efd;
+    color: white;
+    border-radius: 10%;
+    padding: 3px 10px;
+    cursor: pointer;
+}
+
+.btFecha {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid #666;
+    border-radius: 50%;
+    box-shadow: 3px 3px 5px #000;
+    width: 20px;
+    height: 20px;
+    font-weight: bold;
+    color: black;
+    background-color: white;
+    position: absolute;
+    top: -14px;
+    right: -14px;
+    cursor: pointer;
+    user-select: none;
+    margin-bottom: 0px;
+}
+
+.btFecha:hover {
+    background-color: #666;
+    color: white;
+}
+
+.mensagemErroModal {
+    display: none;
+    font-size: 10px;
+    color: red;
+}
+
+#iconPerfil, #iconLogout, #bemVindo {
+    display: none;
+}
+
+/* ----------------------------------------------------//------------------------------------------------------- */
+/* ------- BANNER -------------------------------------//---------------------------------------- BANNER ------- */
+/* ----------------------------------------------------//------------------------------------------------------- */
+
+.banner {
+    height: 500px;
+    padding-top: 40px;
+    padding-left: 40px;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content:flex-end;
+    background-image: url("/img/fundoBanner.jpg");
+    background-repeat: no-repeat;
+}
+
+.textoBanner {
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    align-items:flex-start;
+}
+
+.textoBanner > p {
+    padding: 10px;
+}
+
+.computadorImagem {
+    position: absolute;
+    right: 40px;
+    bottom: -40px;
+}
+
+#paragrafoBanner01 {
+    font-size: 48px;
+    color: white;
+}
+
+#paragrafoBanner02 {
+    font-size: 30px;
+    color: #ccc;
+}
+
+#paragrafoBanner03 {
+    font-size: 20px;
+    color: white;
+    font-style:italic;
+}
+
+#linkSaberMais {
+    margin-top: 40px;
+    margin-left: 8px;
+    padding: 10px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #f5f5f5;
+    background-color: #f16248;
+}
+
+#linkSaberMais:hover {
+    color: #252525;
+    background-color: #c8c8c8;
+}
+
+@media screen and (max-width: 1100px) {
+    
+    .computadorImagem {
+        display: none;
+    }
+
+} 
+
+@media screen and (max-width: 800px) {
+    
+    .banner {
+        height: 320px;
+        padding-top: 0px;
+        padding-left: 0px;
+    }
+
+    .textoBanner {
+        height: 320px;
+        display: flex;
+        flex-direction:column;
+        justify-content:center;
+        align-items: center;
+    }
+
+    #paragrafoBanner01 {
+        font-size: 40px;
+        color: white;
+    }
+    
+    #paragrafoBanner02 {
+        font-size: 24px;
+        color: #ccc;
+    }
+
+    #linkSaberMais {
+        margin-left: 0px;
+    }
+
+}
+
+/* --------- Projeto II -------------------------------//---------------------------------- Projeto II -------- */
+
+
+/* ----------------------------------------------------//------------------------------------------------------- */
+/* ------- MISSAO -------------------------------------//---------------------------------------- MISSAO ------- */
+/* ----------------------------------------------------//------------------------------------------------------- */
+
+.missao {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-bottom: 2px solid #7d7d7d;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.missao > h2 {
+    padding-top: 50px;
+}
+
+.missaoImagemTexto {
+    display: flex;
+    flex-direction: row;
+    padding-top: 20px;
+}
+
+.imagemMissao {
+    flex-basis: 30%;
+    text-align: center;
+    padding-right: 20px;
+}
+
+.textoMissao {
+    flex-basis: 70%;
+    /* text-align: justify; */
+    padding-right: 60px;
+}
+
+.textoMissao > * {
+    margin-bottom: 15px;
+    color: #7d7d7d;
+    word-spacing: 2px;
+    line-height: 1.5;
+}
+
+.textoMissao > h3 {
+    font-weight: bold;
+    font-size: 16.8px;
+    color: #252525;
+}
+
+.textoMissao > a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #0075be;
+    font-size: 16.8px;
+}
+
+.textoMissao > a:hover {
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 800px) {
+
+    .missao {
+        padding-top: 0px;
+        flex-direction: wrap;
+    }
+
+    .missaoImagemTexto {
+        padding-top: 40px;
+        flex-direction: column;
+    }
+
+    .textoMissao {
+        padding-top: 20px;
+        padding-left: 40px;
+    }
+
+} 
+
+/* ----------------------------------------------------//------------------------------------------------------- */
+/* ------- EQUIPA -------------------------------------//---------------------------------------- EQUIPA ------- */
+/* ----------------------------------------------------//------------------------------------------------------- */
+
+.equipa {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    border-bottom: 2px solid #7d7d7d;
+}
+
+.imagensEquipa {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    padding-top: 40px;
+    gap: 30px;
+}
+
+.elementoEquipa01 {
+    width: 300px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-end;
+    background-image: url("/img/foto1.png");
+    background-repeat: no-repeat;
+    border-radius: 50%;
+}
+
+.elementoEquipa01:hover {
+    border-radius: 0%;
+}
+
+.elementoEquipa01:hover > .rectangulo {
+    visibility: visible;
+}
+
+.elementoEquipa02 {
+    width: 300px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-end;
+    background-image: url("/img/foto2.png");
+    background-repeat: no-repeat;
+    border-radius: 50%;
+}
+
+.elementoEquipa02:hover {
+    border-radius: 0%;
+}
+
+.elementoEquipa02:hover > .rectangulo {
+    visibility: visible;
+}
+
+.elementoEquipa03 {
+    width: 300px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-end;
+    background-image: url("/img/foto3.png");
+    background-repeat: no-repeat;
+    border-radius: 50%;
+}
+
+.elementoEquipa03:hover {
+    border-radius: 0%;
+}
+
+.elementoEquipa03:hover > .rectangulo {
+    visibility: visible;
+}
+
+.rectangulo {
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 80px;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.rectangulo > p {
+    color: white;
+}
+
+.nomeElementoEquipa {
+    font-weight: bold;
+    font-size: 17.5px;
+    padding-bottom: 10px;
+}
+
+@media screen and (max-width: 800px) {
+
+    .equipa > h2 {
+        padding-bottom: 20px;
+    }
+
+    .imagensEquipa {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
+
+/* --------- Projeto II -------------------------------//---------------------------------- Projeto II -------- */
+
+
+/* ----------------------------------------------------//------------------------------------------------------- */
+/* ------- OFERTA-FORMATIVA ---------------------------//---------------------------- OFERTA-FORMATIVA --------- */
+/* ----------------------------------------------------//------------------------------------------------------- */
+
+.ofertaFormativa > h2 {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.textoImagemOfertaFormativa {
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-end;
+    background-image: url("/img/slider.jpg");
+    background-repeat: no-repeat;
+    padding-bottom: 50px;
+}
+
+.textoOfertaFormativa {
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+}
+
+#paragrafoOfertaFormativa01 {
+    font-size: 42px;
+    color: #f27d29;
+    padding-bottom: 10px;
+}
+
+#paragrafoOfertaFormativa02 {
+    font-size: 35px;
+    font-weight: bold;
+    color: #153c85;
+    padding-bottom: 10px;
+}
+
+#paragrafoOfertaFormativa03 {
+    font-size: 26px;
+    color: #153c85;
+    margin-top: 60px;
+}
+
+/* --------- Projeto II -------------------------------//---------------------------------- Projeto II -------- */
+
+
+/* ----------------------------------------------------//------------------------------------------------------- */
+/* ------- FOOTER -------------------------------------//---------------------------------------- FOOTER ------- */
+/* ----------------------------------------------------//------------------------------------------------------- */
+
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    list-style-type: none;
+    justify-content:space-between;
+    align-content: center;
+    background-color: #ebebeb;
+    padding-top: 20px;
+    padding-left: 25px;
+    padding-bottom: 20px;
+    margin-bottom: 50px;
+}
+
+footer > ul {
+    flex-basis: 16.666667%;
+    line-height: 20px;
+}
+
+footer > ul > h4 {
+    text-decoration: none;
+    color: #252525;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+footer > ul > li > a {
+    text-decoration: none;
+    color: #7d7d7d;
+}
+
+footer > ul > li > a:hover {
+    text-decoration: none;
+    color: #0075be;
+}
+
+@media screen and (max-width: 800px) {
+
+    footer > ul {
+        flex-basis: 50%;
+        margin-bottom: 20px;
+    }
+
+}
+
+/* --------- Projeto II -------------------------------//---------------------------------- Projeto II -------- */
+
+
+/* ----------------------------------------------------//------------------------------------------------------- */
+/* ------- CONTACTO / SETA ----------------------------//--------------------------------- CONTACTO / SETA ----- */
+/* ----------------------------------------------------//------------------------------------------------------- */
+
+.contacto {
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.8);
+    transition: width 1s;
+    right: 0%;
+    top: 10%;
+}
+
+.contacto > img{
+    margin-left: 15px;
+    margin-top: 15px;
+}
+
+.contacto > p{
+    color:#0acb84;
+    display: none;
+}
+
+.contacto:hover {
+    width: 150px;
+}
+
+.contacto:hover > p {
+    position: relative;
+    width: 200px;
+    left: 50px;
+    bottom: 20px;
+    display: block;
+}
+
+.setaParaCima {
+    max-width: 1400px;
+    position: fixed;
+    bottom: 0;
+    right: 50px;
+}
+
+@media screen and (max-width: 600px) {
+
+    .contacto {
+      display: none;
+    }
+
+    .setaParaCima {
+      display: none;
+    }
+
+  }
+
+  /* --------- Projeto II -------------------------------//---------------------------------- Projeto II -------- */

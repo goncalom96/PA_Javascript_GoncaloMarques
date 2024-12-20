@@ -1,0 +1,54 @@
+main {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 40px 20px 20px 20px;
+}
+
+h2 {
+    color: black;
+    letter-spacing: 1px;
+}
+
+#perfil, #atualizarPerfil {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+}
+
+#atualizarPerfil {
+    display: none;
+  }
+  
+  #atualizarPerfil > p {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  #atualizarPerfil > p > input {
+    width: 150px;
+    flex: 1;
+    border: 1px solid #aaa;
+    background-color: rgba(255, 255, 255, 1);
+  }
+
+  #atualizarPerfil > p > label {
+    width: 150px;
+}
+
+#alterar, #guardar {
+    text-align: center;
+}
+
+#btAlterar, #btGuardar {
+    margin-top: 20px;
+    right: 23px;
+    background-color:#0d6efd;
+    color: white;
+    border-radius: 8%;
+    padding: 7px 15px;
+    cursor: pointer;
+    text-align: center;
+}

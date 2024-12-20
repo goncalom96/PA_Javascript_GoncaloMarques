@@ -1,0 +1,14 @@
+{
+  "utilizadores": [
+    {
+      "nome": "Teste",
+      "email": "teste@hotmail.com",
+      "senha": "123",
+      "morada": "Rua Camb Les Bains, nº8, 3ºDto",
+      "codigoPostal": "2500-326",
+      "pais": "Portugal",
+      "ativo": true,
+      "id": 1
+    }
+  ]
+}
